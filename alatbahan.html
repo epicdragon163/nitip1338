@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alat dan Bahan - Minecraft Brewing 101</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid rgb(185, 230, 255);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: #2c3e50; margin: 0; }
+        h2 { 
+            color: #2980b9; 
+            border-left: 5px solid rgb(185, 230, 255); 
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #5dade2;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { color: #2980b9; }
+
+        .item-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .item-card {
+            background: #fdfdfd;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+        }
+
+        .item-card strong {
+            color: #e67e22;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .item-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← Kembali ke Menu Utama</a>
+        
+        <header>
+            <h1>Alat dan Bahan Brewing</h1>
+            <p>Panduan lengkap persiapan sebelum meracik potion.</p>
+        </header>
+
+        <h2>1. Brewing Equipment</h2>
+        <div class="item-grid">
+            <div class="item-card">
+                <strong>Brewing Stand</strong>
+                Alat utama untuk meracik ramuan. Membutuhkan Blaze Powder sebagai bahan bakar.
+            </div>
+            <div class="item-card">
+                <strong>Glass Bottle</strong>
+                Wadah dasar untuk menampung air (Water Bottle) sebelum diolah menjadi potion.
+            </div>
+            <div class="item-card">
+                <strong>Cauldron</strong>
+                Digunakan untuk menyimpan air atau mencuci dye dari leather armor (opsional namun berguna).
+            </div>
+            <div class="item-card">
+                <strong>Blaze Powder (Fuel)</strong>
+                Sumber energi utama agar Brewing Stand bisa bekerja.
+            </div>
+        </div>
+
+        <h2>2. Base Ingredients</h2>
+        <p>Bahan-bahan ini digunakan untuk menentukan tipe dasar dari ramuanmu:</p>
+        <ul>
+            <li><strong>Nether Wart:</strong> Bahan paling penting untuk membuat <em>Awkward Potion</em> (dasar dari hampir semua ramuan efek).</li>
+            <li><strong>Gunpowder:</strong> Mengubah ramuan menjadi <em>Splash Potion</em> agar bisa dilempar.</li>
+            <li><strong>Dragon's Breath:</strong> Mengubah Splash Potion menjadi <em>Lingering Potion</em>.</li>
+            <li><strong>Fermented Spider Eye:</strong> Digunakan untuk memberikan efek negatif atau membalikkan efek ramuan.</li>
+        </ul>
+
+        <h2>3. Effect Ingredients</h2>
+        <div class="item-grid">
+            <div class="item-card">
+                <strong>Sugar</strong>
+                Memberikan efek Speed (Swiftness).
+            </div>
+            <div class="item-card">
+                <strong>Rabbit's Foot</strong>
+                Memberikan efek Jump Boost (Leaping).
+            </div>
+            <div class="item-card">
+                <strong>Magma Cream</strong>
+                Memberikan efek Fire Resistance.
+            </div>
+            <div class="item-card">
+                <strong>Ghast Tear</strong>
+                Memberikan efek Health Regeneration.
+            </div>
+            <div class="item-card">
+                <strong>Golden Carrot</strong>
+                Memberikan efek Night Vision.
+            </div>
+            <div class="item-card">
+                <strong>Blaze Powder</strong>
+                Memberikan efek Strength.
+            </div>
+        </div>
+
+        <footer style="margin-top: 50px; text-align: center; color: #95a5a6; font-size: 0.8rem;">
+            Minecraft Brewing 101 Guide &copy; 2026
+        </footer>
+    </div>
+
+</body>
+</html>
