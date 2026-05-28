@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Ramuan - Minecraft Brewing 101</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #5dade2;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid rgb(185, 230, 255);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Styling Note / Brewing Logic */
+        .brewing-logic {
+            background-color: #fff4e5;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+
+        .brewing-logic h3 { margin-top: 0; color: #e67e22; }
+
+        .modifier-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Resep Section */
+        h2 {
+            color: #2c3e50;
+            background: rgb(185, 230, 255);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .resep-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .resep-table th, .resep-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .resep-table th { background-color: #fafafa; }
+
+        .badge-awkward {
+            background: #e1bee7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .plus { font-weight: bold; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← Kembali ke Menu Utama</a>
+        
+        <header>
+            <h1>Resep Ramuan (Recipes)</h1>
+            <p>Pelajari cara meracik berbagai macam efek potion.</p>
+        </header>
+
+        <div class="brewing-logic">
+            <h3>⚠️ Brewing Logic (Notes)</h3>
+            <p>Hampir semua ramuan dimulai dari: <strong>Water Bottle + Nether Wart = Awkward Potion</strong>.</p>
+            <div class="modifier-grid">
+                <div>
+                    <strong>• Redstone Dust:</strong> Memperpanjang durasi (contoh: 3:00 → 8:00).
+                </div>
+                <div>
+                    <strong>• Glowstone Dust:</strong> Meningkatkan level/tier (contoh: Speed I → Speed II).
+                </div>
+                <div>
+                    <strong>• Gunpowder:</strong> Mengubah menjadi <em>Splash Potion</em> (bisa dilempar).
+                </div>
+                <div>
+                    <strong>• Dragon's Breath:</strong> Mengubah menjadi <em>Lingering Potion</em> (efek tertinggal di tanah).
+                </div>
+            </div>
+        </div>
+
+        <h2>1. Positive Effects (Efek Positif)</h2>
+        <table class="resep-table">
+            <thead>
+                <tr>
+                    <th>Hasil Potion</th>
+                    <th>Resep (Awkward Potion + ...)</th>
+                    <th>Fungsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Potion of Healing</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Glistering Melon Slice</td>
+                    <td>Menambah HP secara instan.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Swiftness</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Sugar</td>
+                    <td>Meningkatkan kecepatan lari (Speed).</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Strength</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Blaze Powder</td>
+                    <td>Meningkatkan damage serangan fisik.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Fire Resistance</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Magma Cream</td>
+                    <td>Kebal terhadap api dan lava.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Night Vision</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Golden Carrot</td>
+                    <td>Melihat dengan terang di tempat gelap.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Water Breathing</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Pufferfish</td>
+                    <td>Bisa bernapas di dalam air.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Regeneration</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Ghast Tear</td>
+                    <td>Memulihkan HP seiring berjalannya waktu.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Leaping</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Rabbit's Foot</td>
+                    <td>Melompat lebih tinggi.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="text-align: center; color: #95a5a6;"><em>Bagian Efek Negatif akan menyusul di bawah...</em></p>
+
+    </div>
+<h2>2. Negative Effects (Efek Negatif)</h2>
+        <table class="resep-table">
+            <thead>
+                <tr>
+                    <th>Hasil Potion</th>
+                    <th>Resep</th>
+                    <th>Fungsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Potion of Weakness</strong></td>
+                    <td>Water Bottle <span class="plus">+</span> Fermented Spider Eye</td>
+                    <td>Mengurangi damage serangan fisik.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Harming</strong></td>
+                    <td>Potion of Healing/Poison <span class="plus">+</span> Fermented Spider Eye</td>
+                    <td>Memberikan damage instan.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Slowness</strong></td>
+                    <td>Potion of Swiftness/Leaping <span class="plus">+</span> Fermented Spider Eye</td>
+                    <td>Mengurangi kecepatan gerak.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Poison</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Spider Eye</td>
+                    <td>Mengurangi HP secara bertahap (tidak sampai mati).</td>
+                </tr>
+
+                <tr style="background-color: #fff0f0;">
+                    <td><strong>Potion of Infestation (1.21)</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Stone Block</td>
+                    <td>Memunculkan Silverfish saat entitas terkena damage.</td>
+                </tr>
+                <tr style="background-color: #fff0f0;">
+                    <td><strong>Potion of Oozing (1.21)</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Slime Block</td>
+                    <td>Memunculkan Slime saat entitas mati.</td>
+                </tr>
+                <tr style="background-color: #fff0f0;">
+                    <td><strong>Potion of Weaving (1.21)</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Cobweb</td>
+                    <td>Memunculkan jaring (Cobweb) saat entitas mati.</td>
+                </tr>
+                <tr style="background-color: #fff0f0;">
+                    <td><strong>Potion of Wind Charging (1.21)</strong></td>
+                    <td><span class="badge-awkward">Awkward</span> <span class="plus">+</span> Breeze Rod</td>
+                    <td>Mengeluarkan ledakan angin saat entitas mati.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="background-color: #e8f4fd; border-left: 5px solid #2196f3; padding: 15px; border-radius: 5px; font-size: 0.9rem;">
+            <strong>ℹ️ Update 1.21 Note:</strong> Ramuan seperti <em>Infestation, Oozing, Weaving,</em> dan <em>Wind Charging</em> sangat unik karena efeknya memicu kejadian tertentu (seperti memunculkan mob atau blok) saat target terkena damage atau mati.
+        </div>
+</body>
+</html>
