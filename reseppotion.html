@@ -14,7 +14,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px; /* Dikembalikan ke ukuran ideal agar pas di layar */
             margin: 0 auto;
             background: white;
             padding: 30px;
@@ -68,10 +68,16 @@
             font-size: 1.3rem;
         }
 
-        /* Variasi warna judul untuk Efek Campuran */
+        /* Variasi Warna Judul Kategori Khusus */
         .title-mixed {
             background: #e2e8f0;
             border-left: 5px solid #64748b;
+        }
+
+        .title-bedrock {
+            background: #e0f2fe;
+            border-left: 5px solid #0284c7;
+            color: #0369a1;
         }
 
         .resep-table {
@@ -86,12 +92,13 @@
             text-align: left;
             padding: 14px;
             border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
         }
 
         .resep-table th { 
             background-color: #f8fafc; 
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -115,9 +122,17 @@
             font-weight: bold;
         }
 
+        .badge-be {
+            background: #bae6fd;
+            color: #0369a1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
         .plus { font-weight: bold; color: #94a3b8; margin: 0 4px; }
 
-        /* Highlight khusus update 1.21 */
         .row-update { background-color: #f0fdf4; }
         .badge-update {
             background-color: #bbf7d0;
@@ -129,7 +144,6 @@
             font-weight: bold;
         }
 
-        /* Highlight khusus Turtle Master */
         .row-mixed { background-color: #f8fafc; }
 
         .info-box {
@@ -138,7 +152,7 @@
             padding: 15px; 
             border-radius: 8px; 
             font-size: 0.9rem;
-            margin-top: 20px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -149,7 +163,7 @@
         
         <header>
             <h1>Resep Ramuan (Recipes)</h1>
-            <p>Daftar lengkap racikan ramuan standar hingga update terbaru.</p>
+            <p>Daftar lengkap racikan ramuan standar hingga mekanik unik Bedrock Edition.</p>
         </header>
 
         <div class="brewing-logic">
@@ -214,7 +228,7 @@
                 <tr>
                     <td><strong>Potion of Water Breathing</strong></td>
                     <td><span class="badge-awkward">Awkward</span><span class="plus">+</span>Pufferfish</td>
-                    <td>Bisa bernapas di dalam air tanpa kehabisan oksigen.</td>
+                    <td>Bisa bernapas di dalam air.</td>
                 </tr>
                 <tr>
                     <td><strong>Potion of Regeneration</strong></td>
@@ -229,7 +243,7 @@
                 <tr>
                     <td><strong>Potion of Slow Falling</strong></td>
                     <td><span class="badge-awkward">Awkward</span><span class="plus">+</span>Phantom Membrane</td>
-                    <td>Jatuh dengan lambat dan kebal dari fall damage.</td>
+                    <td>Jatuh dengan lambat dan menghapus fall damage.</td>
                 </tr>
             </tbody>
         </table>
@@ -300,13 +314,41 @@
                 <tr class="row-mixed">
                     <td><strong>Potion of the Turtle Master</strong></td>
                     <td><span class="badge-awkward">Awkward</span><span class="plus">+</span>Turtle Shell</td>
-                    <td>Memberikan efek <strong>Slowness IV</strong> (sangat lambat) namun memberikan ketahanan ekstrem berupa <strong>Resistance III</strong>.</td>
+                    <td>Memberikan efek Slowness IV namun mendapat ketahanan ekstrem Resistance III.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="title-bedrock">4. Bedrock Edition Exclusive Recipes</h2>
+        <table class="resep-table">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Hasil Potion</th>
+                    <th style="width: 40%;">Resep Eksklusif Bedrock</th>
+                    <th style="width: 30%;">Catatan Mekanik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Potion of Weakness</strong></td>
+                    <td><span class="badge-be">Mundane Potion</span><span class="plus">+</span>Fermented Spider Eye</td>
+                    <td>Memanfaatkan ramuan gagal tipe Mundane sebagai bahan alternatif pengganti Water Bottle biasa.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Weakness</strong></td>
+                    <td><span class="badge-be">Thick Potion</span><span class="plus">+</span>Fermented Spider Eye</td>
+                    <td>Memanfaatkan ramuan gagal tipe Thick untuk langsung dikonversi menjadi ramuan kelemahan.</td>
+                </tr>
+                <tr>
+                    <td><strong>Potion of Weakness</strong></td>
+                    <td><span class="badge-be">Potion of Starength</span><span class="plus">+</span>Fermented Spider Eye</td>
+                    <td>Mekanik de-buff eksklusif. Efek kekuatan ramuan Strength langsung "dikorupsi"menjadi kelemahan.</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="info-box">
-            <strong>ℹ️ Info Tambahan:</strong> Perhatikan bahwa beberapa ramuan seperti <em>Invisibility</em>, <em>Harming</em>, dan <em>Slowness</em> tidak memerlukan Awkward Potion secara langsung, melainkan harus menggunakan ramuan jadi yang difermentasikan kembali menggunakan <strong>Fermented Spider Eye</strong>.
+            <strong>ℹ️ Info Tambahan:</strong> Tabel nomor 4 menunjukkan keuntungan bermain di platform Bedrock Edition, di mana ramuan gagal akibat salah resep (seperti Mundane atau Thick) tidak terbuang sia-sia karena bisa diolah menjadi item fungsional.
         </div>
 
     </div>
