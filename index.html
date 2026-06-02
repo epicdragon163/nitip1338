@@ -5,102 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Brewing 101 Guide</title>
     <style>
+        /* Kembali ke tema terang yang bersih dan segar */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f8fafc;
+            /* Grid halus versi terang */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
             margin: 0;
-            padding: 40px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
+        /* Judul Utama */
         h1 {
-            color: #2c3e50;
-            margin-bottom: 40px;
+            color: #1e293b;
+            font-size: 2.5rem;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-align: center;
+            margin-bottom: 10px;
         }
 
-        /* Container utama navigasi */
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* Container utama untuk kartu navigasi */
         .nav-container {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
+            margin-bottom: 60px; /* Jarak ke credits */
         }
 
-        /* Styling dasar link */
+        /* Menghilangkan format link standar */
         .nav-link {
             flex: 1;
             text-decoration: none;
             color: inherit;
         }
 
-        /* Styling kotak navigasi */
+        /* Kartu Navigasi Utama (Tetap menggunakan warna RGB request-mu) */
         .nav-box {
-            background-color: rgb(185, 230, 255);
-            height: 150px; /* Tinggi kotak seragam */
+            background: linear-gradient(135deg, rgb(185, 230, 255) 0%, rgb(165, 215, 255) 100%);
+            height: 220px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(0,0,0,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            box-sizing: border-box;
             text-align: center;
-            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 
+                        inset 0 2px 4px rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek bounce */
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Efek hover */
+        /* Efek Hover Interaktif */
         .nav-link:hover .nav-box {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-            background-color: rgb(160, 220, 255);
-            border-color: #5dade2;
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(140, 200, 255, 0.3), 
+                        inset 0 2px 4px rgba(255, 255, 255, 0.6);
+            background: linear-gradient(135deg, rgb(195, 235, 255) 0%, rgb(175, 220, 255) 100%);
         }
 
+        /* Desain Icon Emoji */
+        .nav-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover .nav-icon {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
+        /* Judul Menu */
         .nav-box h2 {
             margin: 0;
-            font-size: 1.3rem;
-            color: #2c3e50;
+            font-size: 1.4rem;
+            color: #1e293b;
+            font-weight: 700;
         }
 
-        /* Responsif untuk layar HP */
-        @media (max-width: 700px) {
+        /* Deskripsi Pendek di Bawah Judul Menu */
+        .nav-box p {
+            margin: 8px 0 0 0;
+            font-size: 0.9rem;
+            color: #475569;
+            opacity: 0.9;
+        }
+
+        /* Area Credits di Bagian Bawah */
+        .credits-section {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .credits-section a {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .credits-section a:hover {
+            color: #38bdf8;
+        }
+
+        /* Responsif untuk Layar HP / Tablet */
+        @media (max-width: 800px) {
+            body {
+                padding: 40px 20px;
+            }
             .nav-container {
                 flex-direction: column;
+                gap: 20px;
             }
             .nav-box {
-                height: 100px;
+                height: 140px;
+                flex-direction: row;
+                justify-content: flex-start;
+                padding: 20px 30px;
+                text-align: left;
+            }
+            .nav-icon {
+                margin-bottom: 0;
+                margin-right: 25px;
+                font-size: 2.5rem;
+            }
+            .nav-box-text {
+                display: flex;
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
 
-    <h1>Minecraft Brewing 101 Guide</h1>
+    <h1>Minecraft Brewing 101</h1>
+    <div class="subtitle">Panduan Interaktif Meracik Ramuan dari Dasar hingga Update 1.21</div>
 
     <div class="nav-container">
         
         <a href="alatbahan.html" class="nav-link">
             <div class="nav-box">
-                <h2>Alat dan Bahan</h2>
+                <div class="nav-icon">🧪</div>
+                <div class="nav-box-text">
+                    <h2>Alat dan Bahan</h2>
+                    <p>Persiapan item & brewing stand</p>
+                </div>
             </div>
         </a>
 
         <a href="reseppotion.html" class="nav-link">
             <div class="nav-box">
-                <h2>Resep Ramuan</h2>
+                <div class="nav-icon">📜</div>
+                <div class="nav-box-text">
+                    <h2>Resep Ramuan</h2>
+                    <p>Racikan efek positif & negatif</p>
+                </div>
             </div>
         </a>
 
         <a href="efek.html" class="nav-link">
             <div class="nav-box">
-                <h2>Efek Potion</h2>
+                <div class="nav-icon">✨</div>
+                <div class="nav-box-text">
+                    <h2>Efek Potion</h2>
+                    <p>Daftar lengkap status efek A-Z</p>
+                </div>
             </div>
         </a>
 
+    </div>
+
+    <div class="credits-section">
+        <p>Created by <strong>Kevin buat tugas besar INF</strong> &copy; 2026</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Made for Minecraft Players • <a href="#">GitHub</a></p>
     </div>
 
 </body>
